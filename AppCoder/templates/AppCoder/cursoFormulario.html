@@ -4,24 +4,19 @@
 
 {% block title %}
 
-<h1 class="mb-5">TITULO DE PROFESORES</h1>
+<h1 class="mb-5">CURSO FORMULARIO</h1>
 
 {% endblock  %}
 
 {% block container %}
 <h1>FORMULARIO</h1>
 
-<form action="{% url 'profesores' %}" method="POST">  {% csrf_token %}
+<form action="{% url 'cursoFormulario' %}" method="POST">  {% csrf_token %}
 
 <table>
-
     {{ form.as_table }}
-
 </table>
-
-<p> <input type="submit" value="ENVIAR PROFE"></p> 
-
+<p> <input type="submit" value="ENVIAR CURSO"></p> 
 </form>
-
 
 {% endblock  %}
