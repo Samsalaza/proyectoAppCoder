@@ -3,7 +3,7 @@
     <head>
         {% load static %}
         <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="viewport" content="width=device-width, initial-scale=0.5, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
         <title>Landing Page - Start Bootstrap Theme</title>
@@ -22,6 +22,7 @@
             <div class="container">
                 <a class="navbar-brand" href="{% url 'inicio' %}">Sistema 34640</a>
                 <a class="btn btn-primary" href="{% url 'profesores' %}">Profesores</a>
+                <a class="btn btn-primary" href="{% url 'leerProfesores' %}">Lista Profesores</a>
                 <a class="btn btn-primary" href="{% url 'estudiantes' %}">Estudientes</a>
                 <a class="btn btn-primary" href="{% url 'entregables' %}">Entregables</a>
                 <a class="btn btn-primary" href="{% url 'cursos' %}">Cursos</a>

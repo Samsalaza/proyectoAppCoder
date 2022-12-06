@@ -1,0 +1,27 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block title %}
+
+<h1 class="mb-5">Formulario De Estudiantes</h1>
+
+{% endblock  %}
+
+{% block container %}
+<h1>DATOS DEL ESTUDIANTE</h1>
+
+<form  method="POST">  {% csrf_token %}
+
+<table>
+
+</table>
+
+<p> NOMBRE: <i>{{ estudiantes.nombre }}</p> 
+<p> APELLIDO: <i>{{ estudiantes.apellido }}</p> 
+<p> EMAIL: <i>{{ estudiantes.email }}</p> 
+
+</form>
+
+
+{% endblock  %}

@@ -1,0 +1,26 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% load static %}
+
+{% block title %}
+
+<h1 class="mb-5">Listado de Estudiantes</h1>
+
+{% endblock  %}
+
+{% block container %}
+<br></br>
+<a class="btn btn-primary" href="{% url 'estudiante_crear' %}">AGREGAR ESTUDIANTE</a>
+<br></br>
+<h1> Listado de Estudiantes </h1>
+<ul>
+    {% for estudiantes in object_list  %}
+   <li> {{ estudiantes }}</li>
+   <a class="btn btn-success" href="{% url 'estudiante_editar' estudiantes.id %}">Editar</a>
+   <a class="btn btn-danger" href="{% url 'estudiante_borrar' estudiantes.id %}">Borrar</a>
+    {% endfor %}
+
+
+</ul>
+{{ mensaje }}
+{% endblock  %}
